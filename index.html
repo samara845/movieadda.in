@@ -1,56 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MOVIE ADDA</title>
-
-  <link rel="stylesheet" href="sty.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Adda - Premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">        
 </head>
 <body>
 
-  <!-- Navbar Section -->
-  <nav class="navbar">
-    <div class="logo">
-      <img src="C:\Users\samar\Downloads\MOVIE ADDA (2).png" alt="Movie Adda Logo" height="90" width="120" id="logo">
+<header id="header">
+    <h1>Get Movie Adda Premium Subscription</h1>
+    <p>Your Premium movies & webseries streaming platform</p>
+    <button class="theme-toggle" id="themeToggle"></button>
+</header>
+
+<div class="subscription-banner" id="subscriptionBanner">
+    <div>
+        <h2>Get Premium Access Now</h2>
+        <p>Stream Latest movies and web series in HD</p>
     </div>
-    <div class="h1">
-        <h1>MOVIE ADDA</h1>
+    <a href="C:\Users\samar\sam portfolio\index.html">
+        <button class="subscribe-button" onclick="windows.location.href='#subscription.plans' ">Subscribe Now</button>
+    </a>
+   
+</div>
+
+<div class="movie-banners" id="movieBanners">
+    <div class="movie-banner">
+        <img src="C:\Users\samar\Downloads\baby john.jpg" alt="Movie 1">
+        <h3>Baby John...</h3>
     </div>
-    <a href="C:\Users\samar\sam portfolio\search.html"><i class="fas fa-search" style="color: #070707; font-size: x-large;"></i></a>
-    <ul class="navbar-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#movies">Trending</a></li>
-      <li><a href="#webseries">Demand</a></li>
-      <li><a href="C:\Users\samar\sam portfolio\.vscode\main form.html">Log in</a></li>
-    </ul>
-    <div> <a href="C:\Users\samar\sam portfolio\index.html">
-      <button style="background-color: aqua; color: #0c0c0c;" >Subscribe Now</button>
-    </a>
-     
+    <div class="movie-banner">
+        <img src="C:\Users\samar\Downloads\vanvaas.jpg" alt="Movie 2">
+        <h3>Vanvaas...</h3>
     </div>
-  </nav>
- 
+    <div class="movie-banner">
+        <img src="C:\Users\samar\Downloads\pushpa 2,2.jpg" alt="Movie 3">
+        <h3>Pushpa 2...</h3>
+    </div>
+</div>
 
-  <!-- Banner Section -->
-  <section class="banner">
-    <img src="MOVIE ADDA.png" alt="Movie Adda Banner" class="banner-img">
-  </section>
+<div class="subscription-options">
+    <h2>Choose Your Subscription Plan</h2>
 
-  <!-- Search Section -->
-  
+    <div class="plan">
+        <h4> Basic Plan</h4>
+        <p>Access to all movies & web series in HD and 4K</p>
+        <div class="price"> 179/3 months.</div>
+        <button class="buy-now">Subscribe Now</button>
+    </div>
 
-  <!-- Button Section -->
-  <section class="button-container">
-    <a href="C:\Users\samar\New folder\.vscode\movie.html">
-      <button>Movies</button>
-    </a>
-    <a href="C:\Users\samar\sam portfolio\.vscode\webseries.html">
-      <button>Web Series</button>
-    </a>
-  </section>
+    <div class="plan">
+        <h4>Premium Plan</h4>
+        <p>Access to all movies & web series in HD and 4K</p>
+        <div class="price">319/6 months.</div>
+        <button class="buy-now">Subscribe Now</button>
+    </div>
 
+    <div class="plan">
+        <h4>Premium Plan + Amazing Offer.</h4>
+        <p>Access to all movies & web series in HD and 4K including our offer.</p>
+        <div class="price">599/Yearly</div>
+        <a href="https://payments.cashfree.com/links/r7sg3h9bnfbg" >
+            <button class="buy-now">Subscribe Now</button>
+        </a>
+        
+    </div>
+</div>
+
+<div class="footer">
+    <p>© 2024 Movie Adda. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+</div>
+
+<script>
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+    const header = document.getElementById('header');
+    const subscriptionBanner = document.getElementById('subscriptionBanner');
+    const movieBanners = document.querySelectorAll('.movie-banner');
+    const plans = document.querySelectorAll('.plan');
+    const footer = document.querySelector('.footer');
+
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('light');
+        header.classList.toggle('light');
+        subscriptionBanner.classList.toggle('light');
+        movieBanners.forEach(banner => banner.classList.toggle('light'));
+        plans.forEach(plan => plan.classList.toggle('light'));
+        footer.classList.toggle('light');
+
+        if (body.classList.contains('light')) {
+            themeToggle.textContent = 'Switch to Dark Theme';
+        } else {
+            themeToggle.textContent = 'Switch to Light Theme';
+        }
+    });
+    
+</script>
 
 </body>
 </html>
